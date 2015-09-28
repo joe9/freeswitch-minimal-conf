@@ -25,4 +25,4 @@ console.
 ### Other Minimal Configurations
 
 * [voxserv/freeswitch_conf_minimal](https://github.com/voxserv/freeswitch_conf_minimal)
-* [Eugene Prokepiev](https://freeswitch.org/jira/browse/FS-4874)
+* [Eugene Prokepiev freeswitch.xml](https://freeswitch.org/jira/browse/FS-4874)
