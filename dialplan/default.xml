@@ -1,9 +1,24 @@
 <include>
   <context name="default">
 
-    <extension name="sample">
-      <condition>
-        <action application="info"/>
+<!--     <extension name="sample"> -->
+<!--       <condition> -->
+<!--         <action application="info"/> -->
+<!--       </condition> -->
+<!--     </extension> -->
+    <extension name="local-test">
+      <condition field="destination_number" expression="^100$">
+        <action application="playback" data="tone_stream://%(10000,0,350,440)"/>
+      </condition>
+    </extension>
+    <extension name="local-users">
+      <condition field="destination_number" expression="^(10[1-3])$">
+        <action application="bridge" data="user/$1@$${local_ip_v4}"/>
+      </condition>
+    </extension>
+    <extension name="public">
+      <condition field="destination_number" expression="^(\d+)$">
+        <action application="bridge" data="{sip_invite_domain=$${sipnet_proxy}}sofia/gateway/sipnet/$1"/>
       </condition>
     </extension>
 
