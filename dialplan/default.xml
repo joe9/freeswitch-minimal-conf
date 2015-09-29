@@ -49,7 +49,7 @@
             <action application="set" data="hangup_after_bridge=true"/>
             <action application="set" data="effective_caller_id_number=${outbound_caller_id_number}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_id_name}"/>
-            <action application="bridge" data="sofia/gateway/circlenet/1[your area code]$1"/>
+            <action application="bridge" data="sofia/gateway/circlenet/1$${circlenet_did_areacode}$1"/>
             </condition>
         </extension>
 

@@ -19,7 +19,7 @@
         <condition field="destination_number" expression="^($${circlenet_did})$">
         <action application="set" data="domain_name=$${domain}"/>
         <!-- single extension bridge -->
-        <action application="bridge" data="sofia/sip/100%$${domain}"/>
+        <action application="bridge" data="sofia/internal/100%$${domain}"/>
         </condition>
     </extension>
   </context>

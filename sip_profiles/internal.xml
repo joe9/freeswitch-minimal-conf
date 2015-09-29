@@ -81,7 +81,7 @@
     <param name="watchdog-step-timeout" value="30000"/>
     <param name="watchdog-event-timeout" value="30000"/>
 
-    <param name="log-auth-failures" value="true"/>
+    <param name="log-auth-failures" value="false"/>
     <param name="forward-unsolicited-mwi-notify" value="false"/>
 
     <param name="context" value="public"/>
@@ -90,15 +90,15 @@
     <param name="sip-port" value="$${internal_sip_port}"/>
     <param name="dialplan" value="XML"/>
     <param name="dtmf-duration" value="2000"/>
-<!--     <param name="inbound-codec-prefs" value="$${global_codec_prefs}"/> -->
-<!--     <param name="outbound-codec-prefs" value="$${global_codec_prefs}"/> -->
+    <param name="inbound-codec-prefs" value="$${global_codec_prefs}"/>
+    <param name="outbound-codec-prefs" value="$${global_codec_prefs}"/>
     <param name="rtp-timer-name" value="soft"/>
     <!-- ip address to use for rtp, DO NOT USE HOSTNAMES ONLY IP ADDRESSES -->
     <param name="rtp-ip" value="$${local_ip_v4}"/>
     <!-- ip address to bind to, DO NOT USE HOSTNAMES ONLY IP ADDRESSES -->
     <param name="sip-ip" value="$${local_ip_v4}"/>
-<!--     <param name="hold-music" value="$${hold_music}"/> -->
-<!--     <param name="apply-nat-acl" value="nat.auto"/> -->
+    <param name="hold-music" value="$${hold_music}"/>
+    <param name="apply-nat-acl" value="nat.auto"/>
 
 
     <!-- (default true) set to false if you do not wish to have called party info in 1XX responses -->
@@ -125,12 +125,12 @@
     -->
     <!--<param name="enable-timer" value="false"/>-->
     <!--<param name="minimum-session-expires" value="120"/>-->
-<!--     <param name="apply-inbound-acl" value="domains"/> -->
+    <param name="apply-inbound-acl" value="domains"/>
     <!--
         This defines your local network, by default we detect your local network
         and create this localnet.auto ACL for this.
     -->
-<!--     <param name="local-network-acl" value="localnet.auto"/> -->
+    <param name="local-network-acl" value="localnet.auto"/>
     <!--<param name="apply-register-acl" value="domains"/>-->
     <!--<param name="dtmf-type" value="info"/>-->
 
@@ -266,8 +266,7 @@
     <!--<param name="NDLB-broken-auth-hash" value="true"/>-->
     <!-- add a ;received="<ip>:<port>" to the contact when replying to register for nat handling -->
     <!--<param name="NDLB-received-in-nat-reg-contact" value="true"/>-->
-<!--     <param name="auth-calls" value="$${internal_auth_calls}"/> -->
-    <param name="auth-calls" value="true"/>
+    <param name="auth-calls" value="$${internal_auth_calls}"/>
     <!-- Force the user and auth-user to match. -->
     <param name="inbound-reg-force-matching-username" value="true"/>
     <!-- on authed calls, authenticate *all* the packets not just invite -->
@@ -284,8 +283,8 @@
     -->
 <!--     <param name="ext-rtp-ip" value="auto-nat"/> -->
 <!--     <param name="ext-sip-ip" value="auto-nat"/> -->
-    <param name="ext-rtp-ip" value="$${external_ip_v4}"/>
-    <param name="ext-sip-ip" value="$${external_ip_v4}"/>
+    <param name="ext-rtp-ip" value="$${external_rtp_ip}"/>
+    <param name="ext-sip-ip" value="$${external_sip_ip}"/>
 
     <!-- rtp inactivity timeout -->
     <param name="rtp-timeout-sec" value="300"/>
