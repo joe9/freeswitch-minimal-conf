@@ -6,6 +6,7 @@
     <param name="debug-presence" value="0"/>
 <!--     <param name="tracelevel" value="DEBUG"/> -->
     <!-- <param name="capture-server" value="udp:homer.domain.com:5060"/> -->
+    <param name="tls-verify-policy" value="in"/>
   </global_settings>
 
   <!--
