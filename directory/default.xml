@@ -27,7 +27,6 @@
     <groups>
       <group name="default">
         <users>
-          <X-PRE-PROCESS cmd="include" data="default/*.xml"/>
           <user id="101"><params><param name="password" value="101"/></params></user>
           <user id="102"><params><param name="password" value="102"/></params></user>
           <user id="103"><params><param name="password" value="103"/></params></user>
