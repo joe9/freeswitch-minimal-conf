@@ -20,7 +20,6 @@
     <param name="context" value="public"/>
     <param name="dialplan" value="XML"/>
     <param name="auth-calls" value="false"/>
-    <param name="register" value="false"/>
 
     <!-- RFC 5626 : Send reg-id and sip.instance -->
     <!--<param name="enable-rfc-5626" value="true"/> -->
@@ -32,13 +31,18 @@
 
   <gateways>
     <gateway name="circlenet">
-        <param name="proxy"    value="$${circlenet_proxy}"/>
-        <param name="username" value="$${circlenet_username}"/>
-        <param name="password" value="$${circlenet_password}"/>
-        <param name="realm"    value="circlenet.us"/>
-        <param name="from-domain"  value="circlenet.us"/>
+        <param name="proxy"     value="$${circlenet_proxy}"/>
+        <param name="username"  value="$${circlenet_username}"/>
+        <param name="password"  value="$${circlenet_password}"/>
+
         <param name="register"     value="true"/>
+        <param name="realm"        value="circlenet.us"/>
+        <param name="from-domain"  value="circlenet.us"/>
         <param name="sip_cid_type" value="rpd"/>
+        <param name="caller-id-in-from" value="false"/>
+
+        <param name="from-user"   value="$${circlenet_did}"/>
+        <action application="set" data="effective_caller_id_number=$${circlenet_did}"/>
     </gateway>
   </gateways>
 </profile>
