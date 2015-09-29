@@ -1,22 +1,26 @@
 
 <include>
     <gateway name="circlenet">
-        <param name="proxy"     value="$${circlenet_proxy}"/>
+        <param name="proxy"       value="$${circlenet_proxy}"/>
+        <param name="realm"       value="$${circlenet_proxy}"/>
+        <param name="from-domain" value="$${circlenet_proxy}"/>
 
         <param name="username"  value="$${circlenet_username}"/>
+        <param name="extension" value="$${circlenet_username}"/>
+
         <param name="password"  value="$${circlenet_password}"/>
 
-        <param name="register"     value="true"/>
+        <param name="register"       value="true"/>
+        <param name="expire-seconds" value="120"/>
+        <param name="retry-seconds"  value="60"/>
 
-        <param name="realm"        value="circlenet.us"/>
-        <param name="from-domain"  value="circlenet.us"/>
-
-        <param name="sip_cid_type" value="rpd"/>
-
-        <param name="caller-id-in-from" value="false"/>
-
+<!--         <param name="sip_cid_type" value="rpd"/> -->
+<!--         <param name="caller-id-in-from" value="false"/> -->
         <param name="from-user"   value="$${circlenet_did}"/>
         <param name="fromuser"    value="$${circlenet_did}"/>
+
         <action application="set" data="effective_caller_id_number=$${circlenet_did}"/>
     </gateway>
 </include>
+
+
