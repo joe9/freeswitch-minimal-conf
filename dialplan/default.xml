@@ -13,6 +13,17 @@
 <!-- for outbound conections -->
   <context name="default">
 
+        <!-- This extension simply prints out the channel variables that you may   -->
+        <!-- use to determine what action to take. Use this for debugging your     -->
+        <!-- dialplan and comment it out once things are set the way you want them -->
+        <!-- The continue=true parameter causes Freeswitch to continue processing  -->
+        <!-- other dialplan conditions even though this one was a match            -->
+        <extension name="PrintVars" continue="true">
+            <condition field="destination_number" expression="^[0-9]">
+            <action application="info"/>
+            </condition>
+        </extension>
+
         <extension name="emergency.circlenet">
             <condition field="${toll_allow}" expression="local"/>
             <condition field="destination_number" expression="^911$">
