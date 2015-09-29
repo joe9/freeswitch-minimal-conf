@@ -29,6 +29,7 @@
     <load module="mod_dialplan_xml"/>
 
     <!-- Codec Interfaces -->
+    <load module="mod_opus"/>
 
     <!-- File Format Interfaces -->
 <!--     <load module="mod_sndfile"/> -->
