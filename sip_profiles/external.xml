@@ -27,6 +27,8 @@
 
     <param name="rtp-ip" value="$${local_ip_v4}"/>
     <param name="sip-ip" value="$${local_ip_v4}"/>
+    <param name="ext-rtp-ip" value="$${external_ip_address}"/>
+    <param name="ext-sip-ip" value="$${external_ip_address}"/>
   </settings>
 
   <gateways>
@@ -42,6 +44,7 @@
         <param name="caller-id-in-from" value="false"/>
 
         <param name="from-user"   value="$${circlenet_did}"/>
+        <param name="fromuser"   value="$${circlenet_did}"/>
         <action application="set" data="effective_caller_id_number=$${circlenet_did}"/>
     </gateway>
   </gateways>
