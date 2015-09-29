@@ -1,4 +1,5 @@
 
+<include>
 <!--
     NOTICE:
 
@@ -11,12 +12,14 @@
 -->
 
 <!-- http://wiki.freeswitch.org/wiki/Dialplan_XML -->
-<include>
+<!-- for inbound conections -->
   <context name="public">
 
-    <!--
-        You can place files in the public directory to get included.
-    -->
-    <X-PRE-PROCESS cmd="include" data="public/*.xml"/>
+    <extension name="$${circlenet_did}">
+        <condition field="destination_number" expression="^($${circlenet_did})$">
+        <action application="set" data="domain_name=$${domain}"/>
+        <action application="transfer" data="[the extension name this will match] XML default"/>
+        </condition>
+    </extension>
   </context>
 </include>

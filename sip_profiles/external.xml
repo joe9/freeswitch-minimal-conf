@@ -1,10 +1,6 @@
 <profile name="external">
   <!-- http://wiki.freeswitch.org/wiki/Sofia_Configuration_Files -->
   <!-- This profile is only for outbound registrations to providers -->
-  <gateways>
-    <X-PRE-PROCESS cmd="include" data="external/*.xml"/>
-  </gateways>
-
   <aliases>
     <!--
         <alias name="outbound"/>
@@ -35,10 +31,14 @@
   </settings>
 
   <gateways>
-    <gateway name="sipnet">
-        <param name="proxy" value="$${sipnet_proxy}"/>
-        <param name="username" value="$${sipnet_login}"/>
-        <param name="password" value="$${sipnet_password}"/>
+    <gateway name="circlenet">
+        <param name="proxy"    value="$${circlenet_proxy}"/>
+        <param name="username" value="$${circlenet_username}"/>
+        <param name="password" value="$${circlenet_password}"/>
+        <param name="realm"    value="circlenet.us"/>
+        <param name="from-domain"  value="circlenet.us"/>
+        <param name="register"     value="true"/>
+        <param name="sip_cid_type" value="rpd"/>
     </gateway>
   </gateways>
 </profile>
