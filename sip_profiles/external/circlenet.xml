@@ -16,10 +16,10 @@
 
 <!--         <param name="sip_cid_type" value="rpd"/> -->
 <!--         <param name="caller-id-in-from" value="false"/> -->
-        <param name="from-user"   value="$${circlenet_did}"/>
-        <param name="fromuser"    value="$${circlenet_did}"/>
+<!--         <param name="from-user"   value="$${circlenet_did}"/> -->
+<!--         <param name="fromuser"    value="$${circlenet_did}"/> -->
 
-        <action application="set" data="effective_caller_id_number=$${circlenet_did}"/>
+<!--         <action application="set" data="effective_caller_id_number=$${circlenet_did}"/> -->
     </gateway>
 </include>
 
