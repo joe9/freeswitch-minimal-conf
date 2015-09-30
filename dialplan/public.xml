@@ -46,7 +46,7 @@
 <!--     </extension> -->
 
     <extension name="public_did">
-        <condition field="destination_number" expression="^($${circlenet_did})$">
+        <condition field="destination_number" expression="^($${circlenet_username})$">
         <!--
             If you're hosting multiple domains you will want to set the
             target_domain on these calls so they hit the proper domain after you
