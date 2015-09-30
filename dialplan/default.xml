@@ -74,12 +74,6 @@
             </condition>
         </extension>
 
-        <extension name="incoming-fxs-channel-1">
-          <condition field="destination_number" expression="^(1000)$">
-            <action application="bridge" data="freetdm/1/1"/>
-          </condition>
-        </extension>
-
   </context>
 </include>
 

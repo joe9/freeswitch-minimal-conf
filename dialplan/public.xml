@@ -45,8 +45,14 @@
 <!--       </condition> -->
 <!--     </extension> -->
 
-    <extension name="public_did">
-        <condition field="destination_number" expression="^($${circlenet_username})$">
+    <extension name="incoming_call_to_phone">
+        <condition field="destination_number" expression="^.+$">
+            <action application="bridge" data="freetdm/1/1"/>
+        </condition>
+    </extension>
+
+<!--     <extension name="public_did"> -->
+<!--         <condition field="destination_number" expression="^($${circlenet_username})$"> -->
         <!--
             If you're hosting multiple domains you will want to set the
             target_domain on these calls so they hit the proper domain after you
@@ -56,13 +62,11 @@
             to any domain you have setup in your user directory.
 
         -->
-        <action application="set" data="domain_name=$${domain}"/>
-        <!-- This example maps the DID 5551212 to ring 1000 in the default context -->
-        <action application="transfer" data="1000 XML default"/>
-<!--         <action application="set" data="hangup_after_bridge=true"/> -->
+<!--         <action application="set" data="domain_name=$${domain}"/> -->
+        <!-- This example maps the DID to ring freetdm/1/1 in the default context -->
 <!--         <action application="bridge" data="freetdm/1/1"/> -->
-        </condition>
-    </extension>
+<!--         </condition> -->
+<!--     </extension> -->
 
     <!--
         If you have made it this far lets challenge the caller and if they authenticate

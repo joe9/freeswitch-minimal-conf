@@ -42,7 +42,7 @@
                 <params>
                     <param name="password" value="$${default_password}"/>
                     <param name="vm-password" value="1000"/>
-                    <param name="dial-string" value="freetdm/1:1" />
+                    <param name="dial-string" value="freetdm/1/1" />
                 </params>
                 <variables>
                     <variable name="toll_allow" value="domestic,international,local"/>
