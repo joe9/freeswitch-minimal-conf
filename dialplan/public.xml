@@ -59,6 +59,8 @@
         <action application="set" data="domain_name=$${domain}"/>
         <!-- This example maps the DID 5551212 to ring 1000 in the default context -->
         <action application="transfer" data="1000 XML default"/>
+<!--         <action application="set" data="hangup_after_bridge=true"/> -->
+<!--         <action application="bridge" data="freetdm/1/1"/> -->
         </condition>
     </extension>
 
