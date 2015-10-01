@@ -1,9 +1,9 @@
 <configuration name="sofia.conf" description="sofia Endpoint">
 
   <global_settings>
-    <param name="loglevel" value="all"/>
+<!--     <param name="loglevel" value="all"/> -->
     <!-- <param name="auto-restart" value="false"/> -->
-    <param name="tracelevel" value="DEBUG"/>
+<!--     <param name="tracelevel" value="DEBUG"/> -->
     <!-- <param name="capture-server" value="udp:homer.domain.com:5060"/> -->
   </global_settings>
 
