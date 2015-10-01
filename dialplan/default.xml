@@ -35,8 +35,8 @@
         <extension name="information.circlenet">
             <condition field="destination_number" expression="^411$">
             <action application="set" data="hangup_after_bridge=true"/>
-            <action application="set" data="effective_caller_id_number=${outbound_caller_id_number}"/>
-            <action application="set" data="effective_caller_id_name=${outbound_caller_id_name}"/>
+            <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
+            <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
             <action application="bridge" data="sofia/gateway/circlenet/411"/>
             </condition>
         </extension>
@@ -44,32 +44,32 @@
         <extension name="local.circlenet">
             <condition field="destination_number" expression="^(\d{7})$">
             <action application="set" data="hangup_after_bridge=true"/>
-            <action application="set" data="effective_caller_id_number=${outbound_caller_id_number}"/>
-            <action application="set" data="effective_caller_id_name=${outbound_caller_id_name}"/>
+            <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
+            <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
             <action application="bridge" data="sofia/gateway/circlenet/1$${circlenet_did_areacode}$1"/>
             </condition>
         </extension>
 
         <extension name="domestic1.circlenet">
             <condition field="destination_number" expression="^(1\d{10})$">
-            <action application="set" data="effective_caller_id_number=${outbound_caller_id_number}"/>
-            <action application="set" data="effective_caller_id_name=${outbound_caller_id_name}"/>
+            <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
+            <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
             <action application="bridge" data="sofia/gateway/circlenet/$1"/>
             </condition>
         </extension>
 
         <extension name="domestic.circlenet">
             <condition field="destination_number" expression="^(\d{10})$">
-            <action application="set" data="effective_caller_id_number=${outbound_caller_id_number}"/>
-            <action application="set" data="effective_caller_id_name=${outbound_caller_id_name}"/>
+            <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
+            <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
             <action application="bridge" data="sofia/gateway/circlenet/1$1"/>
             </condition>
         </extension>
 
         <extension name="international.circlenet">
-            <condition field="destination_number" expression="^(011\d+)$">
-            <action application="set" data="effective_caller_id_number=${outbound_caller_id_number}"/>
-            <action application="set" data="effective_caller_id_name=${outbound_caller_id_name}"/>
+            <condition field="destination_number" expression="^011(\d+)$">
+            <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
+            <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
             <action application="bridge" data="sofia/gateway/circlenet/$1"/>
             </condition>
         </extension>

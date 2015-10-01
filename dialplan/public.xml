@@ -45,7 +45,7 @@
 <!--       </condition> -->
 <!--     </extension> -->
 
-    <extension name="incoming_call_to_phone">
+    <extension name="incoming_call_to_fxs_phone">
         <condition field="destination_number" expression="^.+$">
             <action application="bridge" data="freetdm/1/1"/>
         </condition>
