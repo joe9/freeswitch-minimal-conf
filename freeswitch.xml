@@ -28,6 +28,8 @@
   <!--#comment
       vars.xml contains all the #set directives for the preprocessor.
   -->
+  <X-PRE-PROCESS cmd="include" data="vars-circlenet.xml"/>
+
   <X-PRE-PROCESS cmd="include" data="vars.xml"/>
 
   <section name="configuration" description="Various Configuration">
