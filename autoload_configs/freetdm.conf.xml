@@ -64,7 +64,7 @@ with the signaling protocols that you can run on top of your I/O interfaces.
                         <!--<param name="wait-dialtone-timeout" value="5000"/>-->
 
                         <!-- whether you want to enable callwaiting feature -->
-                        <!--<param name="callwaiting" value="true"/>-->
+                        <param name="callwaiting" value="true"/>
 
                         <!-- whether you want to answer/hangup on polarity reverse for outgoing calls in FXO devices
                              and send polarity reverse on answer/hangup for incoming calls in FXS devices -->
