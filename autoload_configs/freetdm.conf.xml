@@ -54,7 +54,8 @@ with the signaling protocols that you can run on top of your I/O interfaces.
                         <param name="digit-timeout" value="2000"/>
 
                         <!-- Maximum number of digits to wait for (in FXS lines) -->
-                        <param name="max-digits" value="11"/>
+<!--                         <param name="max-digits" value="11"/> -->
+                        <param name="max-digits" value="15"/>
 
                         <!-- whether you want to wait for caller id -->
                         <param name="enable-callerid" value="true"/>
