@@ -10,17 +10,10 @@ for configuring a new system by "adding" required features (instead of
 removing them as one would do if one starts with the default
 configuration).
 
-This folder also includes the corresponding `modules.conf` that lists
-the modules that are required to get this configuration working.
-
 ### Test
 
-This configuration was tested by sending an INVITE (without
-registration) using the `siprtp` example program that comes with
-PJSIP, and verifying that the info dump is produced on the FreeSWITCH
-console.
-
-    $ ./siprtp -q -p 1234 "sip:stub@$(my_ip):5080"
+This configuration was tested by connecting the circlenet VOIP provider
+to an analog phone connected using the OpenVOX A400E
 
 ### Other Minimal Configurations
 
