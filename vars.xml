@@ -325,7 +325,7 @@
        outbound callerid name and number.
   -->
   <!--   "outbound_caller_name='Swathy Puthalapattu' -->
-  <X-PRE-PROCESS cmd="set" data="outbound_caller_name=$${circlenet_did}"/>
+  <X-PRE-PROCESS cmd="set" data="outbound_caller_name=$${circlenet_caller_name}"/>
   <X-PRE-PROCESS cmd="set" data="outbound_caller_id=$${circlenet_did}"/>
 
   <!-- various debug and defaults -->
