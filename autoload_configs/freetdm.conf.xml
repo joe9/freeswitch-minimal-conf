@@ -10,7 +10,7 @@ with the signaling protocols that you can run on top of your I/O interfaces.
 <configuration name="freetdm.conf" description="FreeTDM Configuration">
 
         <settings>
-                <param name="debug" value="0"/>
+                <param name="debug" value="1"/>
                 <!--<param name="hold-music" value="$${moh_uri}"/>-->
                 <!-- Analog global options (they apply to all spans)
                      Remember you can only choose between either call-swap
@@ -22,7 +22,7 @@ with the signaling protocols that you can run on top of your I/O interfaces.
                 Refuse to load the module if there is configuration errors
                 Defaults to 'no'
                 -->
-                <!--<param name="fail-on-error" value="no"/>-->
+                <param name="fail-on-error" value="yes"/>
         </settings>
 
         <!-- Sample analog configuration (The analog_spans tag is for ftmod_analog) -->
