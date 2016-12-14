@@ -24,55 +24,62 @@
             </condition>
         </extension>
 
-        <extension name="emergency.circlenet">
+<!--         voxbeam settings from https://www.voxbeam.com/help -->
+<!--         Sending Calls -->
+<!--           Our SIP server is available at sbc.voxbeam.com. -->
+<!--           We accept calls in e164 format (country code + area code + number) with an added prefix for the Voxbeam route you'd like to use. -->
+<!--             Platinum IP Voice: 0011102 -->
+<!--             Gold IP Voice: 0011101 -->
+<!--             Silver IP Voice: 0011103 -->
+<!--             Call Center IP Voice: 0011104 -->
+
+        <extension name="emergency.voxbeam">
             <condition field="destination_number" expression="^911$">
             <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
-            <action application="bridge" data="sofia/gateway/circlenet/911"/>
+            <action application="bridge" data="sofia/gateway/voxbeam_outbound/0011102911"/>
             </condition>
         </extension>
 
-        <extension name="information.circlenet">
+        <extension name="information.voxbeam">
             <condition field="destination_number" expression="^411$">
             <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
-            <action application="bridge" data="sofia/gateway/circlenet/411"/>
+            <action application="bridge" data="sofia/gateway/voxbeam_outbound/0011102411"/>
             </condition>
         </extension>
 
-        <extension name="local.circlenet">
+        <extension name="local.voxbeam">
             <condition field="destination_number" expression="^(\d{7})$">
             <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
-            <action application="bridge" data="sofia/gateway/circlenet/1$${circlenet_did_areacode}$1"/>
+            <action application="bridge" data="sofia/gateway/voxbeam_outbound/00111021$${voxbeam_did_areacode}$1"/>
             </condition>
         </extension>
 
-        <extension name="domestic1.circlenet">
+        <extension name="domestic1.voxbeam">
             <condition field="destination_number" expression="^(1\d{10})$">
             <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
-            <action application="bridge" data="sofia/gateway/circlenet/$1"/>
+            <action application="bridge" data="sofia/gateway/voxbeam_outbound/0011102$1"/>
             </condition>
         </extension>
 
-        <extension name="domestic.circlenet">
+        <extension name="domestic.voxbeam">
             <condition field="destination_number" expression="^(\d{10})$">
             <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
-            <action application="bridge" data="sofia/gateway/circlenet/1$1"/>
+            <action application="bridge" data="sofia/gateway/voxbeam_outbound/00111021$1"/>
             </condition>
         </extension>
 
-        <extension name="international.circlenet">
+        <extension name="international.voxbeam">
             <condition field="destination_number" expression="^011(\d+)$">
             <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
-            <action application="bridge" data="sofia/gateway/circlenet/$1"/>
+            <action application="bridge" data="sofia/gateway/voxbeam_outbound/0011102$1"/>
             </condition>
         </extension>
 
   </context>
 </include>
-
-

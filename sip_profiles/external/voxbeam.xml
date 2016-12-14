@@ -1,10 +1,10 @@
 
+<!-- got the below from https://www.voxbeam.com/static/guides/Freeswitch-English.pdf -->
 <include>
-  <gateway name="voxbeam_inbound">
-    <param name="proxy"    value="$${voxbeam_inbound_proxy}"/>
-    <param name="realm"    value="$${voxbeam_inbound_proxy}"/>
-    <param name="register" value="false"/>
-  </gateway>
+   <gateway name="voxbeam_outbound">
+        <param name="realm" value="sbc.voxbeam.com" />
+        <param name="register" value="false" />
+    </gateway>
 </include>
 
 
