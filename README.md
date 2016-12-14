@@ -12,7 +12,7 @@ configuration).
 
 ### Test
 
-This configuration was tested by connecting the circlenet VOIP provider
+This configuration was tested by connecting the Voxbeam VOIP provider
 to an analog phone connected using the OpenVOX A400E
 
 ### Other Minimal Configurations
