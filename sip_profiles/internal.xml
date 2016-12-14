@@ -15,6 +15,11 @@
   </aliases>
   <!-- Outbound Registrations -->
   <gateways>
+   <gateway name="voxbeam_outbound">
+        <param name="realm" value="sbc.voxbeam.com" />
+        <param name="proxy" value="sbc.voxbeam.com" />
+        <param name="register" value="false" />
+    </gateway>
   </gateways>
 
   <domains>
