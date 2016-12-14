@@ -65,7 +65,7 @@
 
 
     <!-- Don't be picky about negotiated DTMF just always offer 2833 and accept both 2833 and INFO -->
-    <!--<param name="liberal-dtmf" value="true"/>-->
+    <param name="liberal-dtmf" value="true"/>
 
 
     <!--
@@ -97,7 +97,6 @@
     <!-- port to bind to for sip traffic -->
     <param name="sip-port" value="$${internal_sip_port}"/>
     <param name="dialplan" value="XML"/>
-    <param name="dtmf-duration" value="2000"/>
     <param name="inbound-codec-prefs" value="$${global_codec_prefs}"/>
     <param name="outbound-codec-prefs" value="$${global_codec_prefs}"/>
     <param name="rtp-timer-name" value="soft"/>
@@ -140,7 +139,7 @@
     -->
     <param name="local-network-acl" value="localnet.auto"/>
     <!--<param name="apply-register-acl" value="domains"/>-->
-    <!--<param name="dtmf-type" value="info"/>-->
+    <param name="dtmf-type" value="info"/>
 
 
     <!-- 'true' means every time 'first-only' means on the first register -->
