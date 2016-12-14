@@ -1,19 +1,10 @@
 
 <include>
-    <gateway name="circlenet">
-        <param name="proxy"       value="$${circlenet_proxy}"/>
-        <param name="realm"       value="$${circlenet_proxy}"/>
-        <param name="from-domain" value="$${circlenet_proxy}"/>
-
-        <param name="username"  value="$${circlenet_username}"/>
-        <param name="extension" value="$${circlenet_username}"/>
-
-        <param name="password"  value="$${circlenet_password}"/>
-
-        <param name="register"       value="true"/>
-        <param name="expire-seconds" value="120"/>
-        <param name="retry-seconds"  value="60"/>
-    </gateway>
+  <gateway name="voxbeam_inbound">
+    <param name="proxy"    value="$${voxbeam_inbound_proxy}"/>
+    <param name="realm"    value="$${voxbeam_inbound_proxy}"/>
+    <param name="register" value="false"/>
+  </gateway>
 </include>
 
 

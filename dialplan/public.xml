@@ -39,51 +39,10 @@
       </condition>
     </extension>
 
-<!--     <extension name="public_extensions"> -->
-<!--       <condition field="destination_number" expression="^(10[01][0-9])$"> -->
-<!--    <action application="transfer" data="$1 XML default"/> -->
-<!--       </condition> -->
-<!--     </extension> -->
-
     <extension name="incoming_call_to_fxs_phone">
         <condition field="destination_number" expression="^.+$">
             <action application="bridge" data="freetdm/1/1"/>
         </condition>
     </extension>
-
-<!--     <extension name="public_did"> -->
-<!--         <condition field="destination_number" expression="^($${circlenet_username})$"> -->
-        <!--
-            If you're hosting multiple domains you will want to set the
-            target_domain on these calls so they hit the proper domain after you
-            transfer the caller into the default context.
-
-            $${domain} is the default domain set from vars.xml but you can set it
-            to any domain you have setup in your user directory.
-
-        -->
-<!--         <action application="set" data="domain_name=$${domain}"/> -->
-        <!-- This example maps the DID to ring freetdm/1/1 in the default context -->
-<!--         <action application="bridge" data="freetdm/1/1"/> -->
-<!--         </condition> -->
-<!--     </extension> -->
-
-    <!--
-        If you have made it this far lets challenge the caller and if they authenticate
-        lets try what they dialed in the default context. (commented out by default)
-    -->
-    <!--
-    <extension name="check_auth" continue="true">
-      <condition field="${sip_authorized}" expression="^true$" break="never">
-        <anti-action application="respond" data="407"/>
-      </condition>
-    </extension>
-
-    <extension name="transfer_to_default">
-      <condition>
-        <action application="transfer" data="${destination_number} XML default"/>
-      </condition>
-    </extension>
-    -->
   </context>
 </include>
