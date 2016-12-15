@@ -21,6 +21,7 @@
         <param name="realm" value="108.59.2.133" />
         <param name="proxy" value="108.59.2.133" />
         <param name="register" value="false" />
+        <param name="from-user" value="$${outbound_caller_id}"/>
     </gateway>
   </gateways>
 
