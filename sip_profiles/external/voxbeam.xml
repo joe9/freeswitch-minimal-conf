@@ -8,7 +8,6 @@
 
         <param name="expire-seconds" value="120"/>
         <param name="retry-seconds"  value="30"/>
-<!--         <param name="sip_cid_type" value="rpid" /> -->
     </gateway>
 </include>
 
