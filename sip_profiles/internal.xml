@@ -16,8 +16,10 @@
   <!-- Outbound Registrations -->
   <gateways>
    <gateway name="voxbeam_outbound">
-        <param name="realm" value="sbc.voxbeam.com" />
-        <param name="proxy" value="sbc.voxbeam.com" />
+<!--         <param name="realm" value="sbc.voxbeam.com" /> -->
+<!--         <param name="proxy" value="sbc.voxbeam.com" /> -->
+        <param name="realm" value="108.59.2.133" />
+        <param name="proxy" value="108.59.2.133" />
         <param name="register" value="false" />
     </gateway>
   </gateways>
