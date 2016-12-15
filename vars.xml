@@ -326,6 +326,7 @@
   -->
   <X-PRE-PROCESS cmd="set" data="outbound_caller_name=$${voxbeam_caller_name}"/>
   <X-PRE-PROCESS cmd="set" data="outbound_caller_id=$${voxbeam_did}"/>
+  <X-PRE-PROCESS cmd="set" data="from-user=$${voxbeam_did}"/>
 
   <!-- various debug and defaults -->
 <!--   TODO remove the below line and uncomment the one below that -->
