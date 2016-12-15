@@ -5,6 +5,9 @@
         <param name="realm" value="95.211.119.240" />
         <param name="proxy" value="95.211.119.240" />
         <param name="register" value="false" />
+
+        <param name="expire-seconds" value="120"/>
+        <param name="retry-seconds"  value="60"/>
     </gateway>
 </include>
 
