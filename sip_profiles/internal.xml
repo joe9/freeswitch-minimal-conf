@@ -37,10 +37,6 @@
 
   <settings>
 
-
-    <!-- inject delay between dtmf digits on send to help some slow interpreters (also per channel with rtp_digit_delay var -->
-    <!-- <param name="rtp-digit-delay" value="40"/>-->
-
     <!--
         When calls are in no media this will bring them back to media
         when you press the hold button.
@@ -68,11 +64,16 @@
     <!-- Use presence_map.conf.xml to convert extension regex to presence protos for routing -->
     <!-- <param name="presence-proto-lookup" value="true"/> -->
 
-
+<!--     https://blog.shimaore.net/2009/01/recipe-for-freeswitch-and-rfc2833.html -->
+<!--     This makes DTMF as RFC2833, and by default FreeSwitch will pass the RFC2833 events without modifying them.  -->
+    <param name="dtmf-type" value="rfc2833"/>
+    <!-- If true, it passes RFC 2833 DTMF's from one side of a bridge to the other, untouched. Otherwise, it decodes and re-encodes them before passing them on. -->
+    <param name="pass-rfc2833" value="true"/>
     <!-- Don't be picky about negotiated DTMF just always offer 2833 and accept both 2833 and INFO -->
     <!--  use of this option is not recommended as its purpose is to cope with buggy implementations -->
     <!--  <param name="liberal-dtmf" value="true"/> -->
-
+    <!-- inject delay between dtmf digits on send to help some slow interpreters (also per channel with rtp_digit_delay var -->
+    <!-- <param name="rtp-digit-delay" value="40"/>-->
 
     <!--
         Sometimes, in extremely rare edge cases, the Sofia SIP stack may stop
@@ -145,7 +146,6 @@
     -->
     <param name="local-network-acl" value="localnet.auto"/>
     <!--<param name="apply-register-acl" value="domains"/>-->
-    <param name="dtmf-type" value="info"/>
 
 
     <!-- 'true' means every time 'first-only' means on the first register -->
@@ -236,7 +236,7 @@
 
     <!--If you don't want to pass through timestamps from 1 RTP call to another (on a per call basis with rtp_rewrite_timestamps chanvar)-->
     <!--<param name="rtp-rewrite-timestamps" value="true"/>-->
-    <!--<param name="pass-rfc2833" value="true"/>-->
+
     <!--If you have ODBC support and a working dsn you can use it instead of SQLite-->
     <!--<param name="odbc-dsn" value="dsn:user:pass"/>-->
 

@@ -435,8 +435,6 @@
   <!-- WebRTC Video -->
   <!-- Suppress CNG for WebRTC Audio -->
 <!--   <X-PRE-PROCESS cmd="set" data="suppress_cng=true"/> -->
-  <!-- Enable liberal DTMF for those that can't get it right -->
-<!--   <X-PRE-PROCESS cmd="set" data="rtp_liberal_dtmf=true"/> -->
   <!-- Helps with WebRTC Audio -->
 
   <!-- Stock Video Avatars -->
