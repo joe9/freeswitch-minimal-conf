@@ -1,7 +1,7 @@
 
 <!-- got the below from https://www.voxbeam.com/static/guides/Freeswitch-English.pdf -->
 <include>
-   <gateway name="voxbeam_outbound">
+   <gateway name="voxbeam_inbound">
         <param name="realm" value="95.211.119.240" />
         <param name="proxy" value="95.211.119.240" />
         <param name="from-domain" value="95.211.119.240" />
