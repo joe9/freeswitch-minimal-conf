@@ -70,7 +70,8 @@
 
 
     <!-- Don't be picky about negotiated DTMF just always offer 2833 and accept both 2833 and INFO -->
-    <param name="liberal-dtmf" value="true"/>
+    <!--  use of this option is not recommended as its purpose is to cope with buggy implementations -->
+    <!--  <param name="liberal-dtmf" value="true"/> -->
 
 
     <!--
