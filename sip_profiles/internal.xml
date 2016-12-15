@@ -20,7 +20,6 @@
 <!--         <param name="proxy" value="sbc.voxbeam.com" /> -->
         <param name="realm" value="108.59.2.133" />
         <param name="proxy" value="108.59.2.133" />
-        <param name="caller-id-in-from" value="false"/>
         <param name="register" value="false" />
     </gateway>
   </gateways>
@@ -155,7 +154,7 @@
 
     <!-- Caller-ID type (choose one, can be overridden by inbound call type and/or sip_cid_type channel variable -->
     <!-- Remote-Party-ID header -->
-    <!--<param name="caller-id-type" value="rpid"/>-->
+    <param name="caller-id-type" value="rpid"/>
 
     <!-- P-*-Identity family of headers -->
     <!--<param name="caller-id-type" value="pid"/>-->
