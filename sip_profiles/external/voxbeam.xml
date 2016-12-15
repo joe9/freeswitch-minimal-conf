@@ -6,6 +6,7 @@
         <param name="proxy" value="95.211.119.240" />
         <param name="register" value="false" />
 
+        <param name="from-user" value="$${outbound_caller_id}"/>
         <param name="expire-seconds" value="120"/>
         <param name="retry-seconds"  value="30"/>
 <!--         <param name="sip_cid_type" value="rpid" /> -->
