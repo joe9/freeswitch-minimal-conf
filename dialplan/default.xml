@@ -38,7 +38,7 @@
             <condition field="destination_number" expression="^911$">
             <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
-            <action application="bridge" data="sofia/gateway/voxbeam_outbound/0011102911"/>
+            <action application="bridge" data="sofia/gateway/voxbeam_outbound/0011101911"/>
             </condition>
         </extension>
 
@@ -46,7 +46,7 @@
             <condition field="destination_number" expression="^411$">
             <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
-            <action application="bridge" data="sofia/gateway/voxbeam_outbound/0011102411"/>
+            <action application="bridge" data="sofia/gateway/voxbeam_outbound/0011101411"/>
             </condition>
         </extension>
 
@@ -54,7 +54,7 @@
             <condition field="destination_number" expression="^(\d{7})$">
             <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
-            <action application="bridge" data="sofia/gateway/voxbeam_outbound/00111021$${voxbeam_did_areacode}$1"/>
+            <action application="bridge" data="sofia/gateway/voxbeam_outbound/00111011$${voxbeam_did_areacode}$1"/>
             </condition>
         </extension>
 
@@ -62,7 +62,7 @@
             <condition field="destination_number" expression="^(1\d{10})$">
             <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
-            <action application="bridge" data="sofia/gateway/voxbeam_outbound/0011102$1"/>
+            <action application="bridge" data="sofia/gateway/voxbeam_outbound/0011101$1"/>
             </condition>
         </extension>
 
@@ -70,7 +70,7 @@
             <condition field="destination_number" expression="^(\d{10})$">
             <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
-            <action application="bridge" data="sofia/gateway/voxbeam_outbound/00111021$1"/>
+            <action application="bridge" data="sofia/gateway/voxbeam_outbound/00111011$1"/>
             </condition>
         </extension>
 
@@ -78,7 +78,7 @@
             <condition field="destination_number" expression="^011(\d+)$">
             <action application="set" data="effective_caller_id_number=${outbound_caller_id}"/>
             <action application="set" data="effective_caller_id_name=${outbound_caller_name}"/>
-            <action application="bridge" data="sofia/gateway/voxbeam_outbound/0011102$1"/>
+            <action application="bridge" data="sofia/gateway/voxbeam_outbound/0011101$1"/>
             </condition>
         </extension>
 
