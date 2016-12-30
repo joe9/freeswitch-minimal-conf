@@ -18,8 +18,8 @@
    <gateway name="voxbeam_outbound">
 <!--         <param name="realm" value="sbc.voxbeam.com" /> -->
 <!--         <param name="proxy" value="sbc.voxbeam.com" /> -->
-        <param name="realm" value="108.59.2.133" />
-        <param name="proxy" value="108.59.2.133" />
+        <param name="realm" value="108.59.2.134" />
+        <param name="proxy" value="108.59.2.134" />
         <param name="register" value="false" />
         <!-- without the below, the username in the From: Invite header is
              FreeSWITCH and the caller-id in outbound calls is FreeSWITCH -->
