@@ -255,8 +255,8 @@
        127 - BV32
 
   -->
-  <X-PRE-PROCESS cmd="set" data="global_codec_prefs=G723,G726-32,PCMA,PCMU,OPUS,G722,VP8"/>
-  <X-PRE-PROCESS cmd="set" data="outbound_codec_prefs=G723,G726-32,PCMA,PCMU,OPUS,G722,VP8"/>
+  <X-PRE-PROCESS cmd="set" data="global_codec_prefs=PCMA,PCMU,OPUS,VP8"/>
+  <X-PRE-PROCESS cmd="set" data="outbound_codec_prefs=PCMA,PCMU,OPUS,VP8"/>
 
   <!--
       xmpp_client_profile and xmpp_server_profile

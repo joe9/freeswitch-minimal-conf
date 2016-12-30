@@ -30,7 +30,11 @@
     <load module="mod_dialplan_xml"/>
 
     <!-- Codec Interfaces -->
-    <load module="mod_opus"/>
+<!--     <load module="mod_opus"/> -->
+<!--     <load module="mod_spandsp"/> -->
+<!--     <load module="mod_g711"/> -->
+<!--     <load module="mod_g723_1"/> -->
+<!--     <load module="mod_g729"/> -->
 
     <!-- File Format Interfaces -->
 <!--     <load module="mod_sndfile"/> -->
