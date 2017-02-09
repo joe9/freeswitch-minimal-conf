@@ -21,7 +21,7 @@
         <extension name="PrintVars" continue="true">
             <condition field="destination_number" expression="^[0-9]">
             <action application="info"/>
-            <action application="log" data="DEBUG DIALING Extension DialURI [${sip_uri_to_dial}]"/>
+<!--             <action application="log" data="DEBUG DIALING Extension DialURI [${sip_uri_to_dial}]"/> -->
             </condition>
         </extension>
 
