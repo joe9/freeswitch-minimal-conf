@@ -33,15 +33,10 @@
       </condition>
     </extension>
 
-    <extension name="call_debug" continue="true">
-      <condition>
-        <action application="info"/>
-      </condition>
-    </extension>
-
     <extension name="incoming_call_to_fxs_phone">
         <condition field="destination_number" expression="^.+$">
-            <action application="bridge" data="freetdm/1/1"/>
+          <action application="info"/>
+          <action application="bridge" data="freetdm/1/1"/>
         </condition>
     </extension>
   </context>
