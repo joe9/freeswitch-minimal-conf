@@ -20,7 +20,7 @@
     <param name="colorize-console" value="true"/>
 
     <!--Include full timestamps in dialplan logs -->
-    <param name="dialplan-timestamps" value="false"/>
+    <param name="dialplan-timestamps" value="true"/>
 
     <!-- Run the timer at 20ms by default and drop down as needed unless you set 1m-timer=true which was previous default -->
     <!-- <param name="1ms-timer" value="true"/> -->
