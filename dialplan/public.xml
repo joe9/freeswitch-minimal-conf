@@ -33,6 +33,14 @@
       </condition>
     </extension>
 
+    <extension name="blocked_cid_npa">
+        <condition field="caller_id_number" expression="^15203715162|15202103645|16027370941$">
+          <action application="info"/>
+          <action application="respond" data="503"/>
+          <action application="hangup"/>
+        </condition>
+    </extension>
+
     <extension name="incoming_call_to_fxs_phone">
         <condition field="destination_number" expression="^.+$">
           <action application="info"/>
