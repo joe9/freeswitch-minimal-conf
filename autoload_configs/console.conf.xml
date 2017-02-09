@@ -32,7 +32,7 @@
      -->
 <!--     <map name="log_event" value="DEBUG"/> -->
 <!--     <map name="all" value="DEBUG"/> -->
-    <map name="all" value="warning,err,crit,alert"/>
+    <map name="all" value="info,notice,warning,err,crit,alert"/>
 
     <!--
       You can use or modify this sample set of mappings.  It turns on higher
