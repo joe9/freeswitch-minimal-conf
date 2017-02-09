@@ -34,7 +34,9 @@
     </extension>
 
     <extension name="call_debug" continue="true">
+      <condition>
         <action application="info"/>
+      </condition>
     </extension>
 
     <extension name="incoming_call_to_fxs_phone">
