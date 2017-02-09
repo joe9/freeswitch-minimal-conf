@@ -1,33 +1,31 @@
-From 01c740b10f30be16b56be7d0ad4538f05b03fbc2 Mon Sep 17 00:00:00 2001
+From 6b714605f85de77eced0dfb7842f6279f2e56a75 Mon Sep 17 00:00:00 2001
 From: joe9 <joe9mail@gmail.com>
-Date: Thu, 29 Dec 2016 19:35:21 -0700
-Subject: [PATCH] Revert "switched off debugging"
+Date: Wed, 8 Feb 2017 19:54:54 -0700
+Subject: [PATCH] switch on debugging
 
-This reverts commit 975bb8e1a778407accbf1e95a126aca9147db1a1.
 ---
- autoload_configs/console.conf.xml |  7 ++++---
+ autoload_configs/console.conf.xml |  6 +++---
  autoload_configs/sofia.conf.xml   |  6 +++---
- autoload_configs/switch.conf.xml  |  7 ++++---
+ autoload_configs/switch.conf.xml  |  6 +++---
  dialplan/default.xml              |  2 +-
  sip_profiles/external.xml         | 12 ++++++------
  sip_profiles/internal.xml         | 12 ++++++------
- 6 files changed, 24 insertions(+), 22 deletions(-)
+ 6 files changed, 22 insertions(+), 22 deletions(-)
 
 diff --git a/autoload_configs/console.conf.xml b/autoload_configs/console.conf.xml
-index 281f17b..192f1ac 100644
+index e53528d..8e93f6a 100644
 --- a/autoload_configs/console.conf.xml
 +++ b/autoload_configs/console.conf.xml
-@@ -30,9 +30,10 @@
+@@ -30,9 +30,9 @@
          <map name="mod_local_stream.c" value="warning,debug"/>
          <map name="mod_sndfile.c" value="warning,info,debug"/>
       -->
 -<!--     <map name="log_event" value="DEBUG"/> -->
 -<!--     <map name="all" value="DEBUG"/> -->
--    <map name="all" value="warning,err,crit,alert"/>
+-    <map name="all" value="info,notice,warning,err,crit,alert"/>
 +    <map name="log_event" value="DEBUG"/>
 +    <map name="all" value="DEBUG"/>
-+<!--     <map name="all" value="warning,err,crit,alert"/> -->
-+<!--     <map name="all" value="console,debug,info,notice,warning,err,crit,alert"/> -->
++<!--     <map name="all" value="info,notice,warning,err,crit,alert"/> -->
  
      <!--
        You can use or modify this sample set of mappings.  It turns on higher
@@ -51,18 +49,17 @@ index 5243617..c4d0d27 100644
    </global_settings>
  
 diff --git a/autoload_configs/switch.conf.xml b/autoload_configs/switch.conf.xml
-index 768232b..fc523e0 100644
+index 7822b4a..3427fcd 100644
 --- a/autoload_configs/switch.conf.xml
 +++ b/autoload_configs/switch.conf.xml
-@@ -54,10 +54,11 @@
+@@ -54,10 +54,10 @@
      <!--Most channels to create per second -->
      <param name="sessions-per-second" value="30"/>
      <!-- Default Global Log Level - value is one of debug,info,notice,warning,err,crit,alert -->
--    <param name="loglevel" value="warning"/>
+-    <param name="loglevel" value="info"/>
 -<!--     <param name="loglevel" value="debug"/> -->
-+<!--     <param name="loglevel" value="warning"/> -->
++<!--     <param name="loglevel" value="info"/> -->
 +    <param name="loglevel" value="debug"/>
-+
      <!-- Set the core DEBUG level (0-10) -->
 -<!--     <param name="debug-level" value="10"/> -->
 +    <param name="debug-level" value="10"/>
@@ -133,5 +130,5 @@ index 75e57b5..57c3a9c 100644
      <!-- Use presence_map.conf.xml to convert extension regex to presence protos for routing -->
      <!-- <param name="presence-proto-lookup" value="true"/> -->
 -- 
-2.7.3
+2.10.2
 
