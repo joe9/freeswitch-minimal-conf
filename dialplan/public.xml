@@ -34,7 +34,7 @@
     </extension>
 
     <extension name="blocked_cid_npa">
-        <condition field="caller_id_number" expression="^15203715162|15202103645|16027370941|15306274017|15106718305$">
+        <condition field="caller_id_number" expression="^15203715162|15202103645|16027370941|15306274017|15106718305|15202103654|16237777257|15203275461|18328867716|18882503648$">
           <action application="info"/>
           <action application="respond" data="503"/>
           <action application="hangup"/>
