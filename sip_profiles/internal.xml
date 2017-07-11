@@ -18,6 +18,7 @@
    <gateway name="voxbeam_outbound">
 <!--         <param name="realm" value="sbc.voxbeam.com" /> -->
 <!--         <param name="proxy" value="sbc.voxbeam.com" /> -->
+<!--         https://www.voxbeam.com/static/guides/Freeswitch-English.pdf mention using 108.59.2.133 -->
         <param name="realm" value="108.59.2.134" />
         <param name="proxy" value="108.59.2.134" />
         <param name="register" value="false" />
