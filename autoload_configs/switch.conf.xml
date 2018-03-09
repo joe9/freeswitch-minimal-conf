@@ -88,6 +88,9 @@
          value is lower-bounded by min_dtmf_duration and upper-bounded by
          max-dtmf-duration\. -->
     <!-- <param name="default-dtmf-duration" value="2000"/> -->
+    <!-- the default is 2000. Changing this to 20000 seem to help when calling
+         certain numbers -->
+    <param name="default-dtmf-duration" value="20000"/>
 
     <!--
         If you want to send out voicemail notifications via Windows you'll need to change the mailer-app
